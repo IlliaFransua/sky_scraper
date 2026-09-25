@@ -5,13 +5,13 @@ import java.util.List;
 
 public class PermutationFinder {
 
-  public List<List<Integer>> backtracking(int[] nums) {
+  public List<List<Integer>> findAll(int[] nums) {
     List<List<Integer>> result = new ArrayList<>();
-    realBacktracking(result, nums, new ArrayList<>(), new boolean[nums.length]);
+    backtracking(result, nums, new ArrayList<>(), new boolean[nums.length]);
     return result;
   }
 
-  private void realBacktracking(
+  private void backtracking(
       List<List<Integer>> result, int[] nums, List<Integer> current, boolean[] seen) {
     for (int i = 0; i < nums.length; i++) {
       if (current.size() == 3) {
@@ -25,7 +25,7 @@ public class PermutationFinder {
 
       current.add(nums[i]);
       seen[i] = true;
-      realBacktracking(result, nums, current, seen);
+      backtracking(result, nums, current, seen);
       seen[i] = false;
       current.remove(current.size() - 1);
     }

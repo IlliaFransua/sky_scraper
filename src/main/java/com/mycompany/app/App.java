@@ -20,7 +20,7 @@ public class App {
     }
 
     var nums = new int[] {1, 2, 3, 4};
-    List<List<Integer>> res = permutationFinder.backtracking(nums);
+    List<List<Integer>> res = permutationFinder.findAll(nums);
     System.out.println(res);
   }
 }
