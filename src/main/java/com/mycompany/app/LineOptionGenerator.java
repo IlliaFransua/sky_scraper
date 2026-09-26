@@ -7,7 +7,7 @@ import java.util.stream.IntStream;
 public class LineOptionGenerator {
 
   private final DigitPermutationGenerator permutationFinder = new DigitPermutationGenerator();
-  private final LineOptionFilter lineOptionFilter = new LineOptionFilter();
+  private final LineOptionService lineOptionService = new LineOptionService();
 
   public List<List<List<Integer>>> generateAllPosibleLines(
       int gridSize, List<List<Integer>> heights) {
@@ -21,7 +21,7 @@ public class LineOptionGenerator {
     allLinesOptions.add(List.copyOf(res));
     allLinesOptions.add(List.copyOf(res));
 
-    lineOptionFilter.clearByHeight(heights, allLinesOptions);
+    lineOptionService.clearLinesByHeights(heights, allLinesOptions);
 
     return allLinesOptions;
   }
