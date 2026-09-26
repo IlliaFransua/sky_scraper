@@ -16,10 +16,9 @@ public class LineOptionGenerator {
 
     List<List<List<Integer>>> allLinesOptions = new ArrayList<>();
 
-    allLinesOptions.add(List.copyOf(res));
-    allLinesOptions.add(List.copyOf(res));
-    allLinesOptions.add(List.copyOf(res));
-    allLinesOptions.add(List.copyOf(res));
+    for (int i = 0; i < gridSize; ++i) {
+      allLinesOptions.add(List.copyOf(res));
+    }
 
     lineOptionService.clearLinesByHeights(heights, allLinesOptions);
 
