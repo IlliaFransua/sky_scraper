@@ -3,9 +3,9 @@ package com.mycompany.app;
 import java.util.ArrayList;
 import java.util.List;
 
-public class PermutationFinder {
+public class DigitPermutationGenerator {
 
-  public List<List<Integer>> findAll(int[] nums) {
+  public List<List<Integer>> generateAllPosible(int[] nums) {
     List<List<Integer>> result = new ArrayList<>();
     backtracking(result, nums, new ArrayList<>(), new boolean[nums.length]);
     return result;
