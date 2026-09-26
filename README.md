@@ -23,6 +23,8 @@ Expected:
 
 ```
 
+---
+
 ```bash
 mvn package && java -cp target/backtracking-1.0-SNAPSHOT.jar com.mycompany.app.App 4 2 2 1 1 2 3 3 4 2 2 1 1 2 3 3
 ```
@@ -36,6 +38,8 @@ Expected:
 4 3 1 2
 
 ```
+
+---
 
 ```bash
 mvn package && java -cp target/backtracking-1.0-SNAPSHOT.jar com.mycompany.app.App 3 2 1 2 2 3 3 1 3 2 1 2 2 3 3 1
@@ -51,6 +55,8 @@ Expected:
 
 ```
 
+---
+
 ```bash
 mvn package && java -cp target/backtracking-1.0-SNAPSHOT.jar com.mycompany.app.App 2 2 3 1 3 2 1 2 3 1 2 2 1 3 2 2
 ```
@@ -65,6 +71,8 @@ Expected:
 
 ```
 
+---
+
 ```bash
 mvn package && java -cp target/backtracking-1.0-SNAPSHOT.jar com.mycompany.app.App 1 2 2 2 1 2 2 2 2 2 2 2 2 2 2 2
 ```
@@ -76,6 +84,8 @@ Error
 
 ```
 
+---
+
 ```bash
 mvn package && java -cp target/backtracking-1.0-SNAPSHOT.jar com.mycompany.app.App 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
 ```
@@ -86,6 +96,8 @@ Expected:
 Error
 
 ```
+
+---
 
 ```bash
 mvn package && java -cp target/backtracking-1.0-SNAPSHOT.jar com.mycompany.app.App 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
