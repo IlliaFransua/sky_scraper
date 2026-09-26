@@ -2,6 +2,7 @@ package com.mycompany.app;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.IntStream;
 
 public class App {
 
@@ -21,7 +22,7 @@ public class App {
       return;
     }
 
-    var nums = new int[] {1, 2, 3, 4};
+    int[] nums = IntStream.rangeClosed(1, gridSize).toArray();
     List<List<Integer>> res = permutationFinder.findAll(nums);
 
     List<List<List<Integer>>> allLinesOptions = new ArrayList<>();
@@ -31,23 +32,6 @@ public class App {
     allLinesOptions.add(List.copyOf(res));
     allLinesOptions.add(List.copyOf(res));
 
-    int sum = 0;
-    for (int i = 0; i < allLinesOptions.size(); i++) {
-      for (int j = 0; j < allLinesOptions.get(i).size(); j++) {
-        ++sum;
-      }
-    }
-    System.out.println(sum);
-
     lineOptionFilter.clearByHeight(heights, allLinesOptions);
-
-    sum = 0;
-    for (int i = 0; i < allLinesOptions.size(); i++) {
-      for (int j = 0; j < allLinesOptions.get(i).size(); j++) {
-        ++sum;
-      }
-    }
-    System.out.println(sum);
-    System.out.println(allLinesOptions);
   }
 }
