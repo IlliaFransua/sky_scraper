@@ -14,7 +14,7 @@ public class PermutationFinder {
   private void backtracking(
       List<List<Integer>> result, int[] nums, List<Integer> current, boolean[] seen) {
     for (int i = 0; i < nums.length; i++) {
-      if (current.size() == 3) {
+      if (current.size() == seen.length) {
         result.add(new ArrayList<>(current));
         return;
       }
